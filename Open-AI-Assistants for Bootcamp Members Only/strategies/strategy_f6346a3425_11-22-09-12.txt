@@ -1,0 +1,35 @@
+Sure, I can outline a trading strategy based on pivot points. Pivot points are a technical analysis indicator used to determine the overall trend of the market over different time frames. They're also used as potential support and resistance levels. There are several ways to calculate pivot points, but the most common method is to use the previous day's high, low, and close prices.
+
+Here's a simple pivot point trading strategy:
+
+## Pivot Point Calculation
+First, calculate the pivot points for each day using the following formulas:
+
+- Pivot Point (PP) = (Previous High + Previous Low + Previous Close) / 3
+- Resistance 1 (R1) = (2 x PP) - Previous Low
+- Support 1 (S1) = (2 x PP) - Previous High
+- Resistance 2 (R2) = PP + (Previous High - Previous Low)
+- Support 2 (S2) = PP - (Previous High - Previous Low)
+
+These calculations are based on the high, low, and close of the previous trading session. You can also calculate further levels of resistance and support (R3, S3, etc.) if desired.
+
+## Strategy Overview
+
+### Buy Signal
+1. When the price moves above the pivot point and then consolidates for a short period, this could indicate upward momentum. Consider an entry when the price breaks above this short-term consolidation.
+2. Alternatively, wait for the price to retrace back to the pivot line after a move up, confirming the pivot line as support. Enter a long position if the price shows signs of bouncing off this level.
+
+### Sell Signal
+1. Conversely, when the price moves below the pivot point and then consolidates, this could indicate downward momentum. Consider a short entry when the price breaks below this short-term consolidation.
+2. Or, if there was a move down and the price retraces back to the pivot line, consider a short position if the pivot line acts as resistance and the price appears to be rejecting this level.
+
+### Stop Loss and Take Profit
+- Stop Loss: Place a stop loss just above the nearest resistance for a short position, or below the nearest support for a long position.
+- Take Profit: Consider taking profit at either the next pivot level (for example, S1 or R1) or aim for a predetermined risk-reward ratio such as 2:1 or 3:1.
+
+### Additional Rules
+- If the price reaches R1 or S1 and stalls, consider exiting half of your position and moving your stop loss to break even for the remaining position.
+- Avoid entering new positions if the price is currently between the central pivot point and R1 or S1. The opportunity for a clear trend is less in this zone.
+- Increase the reliability of signals by looking for confirmation from other indicators such as moving averages, RSI, or MACD.
+
+Please let me know if you want to proceed further and code a backtest for this strategy.

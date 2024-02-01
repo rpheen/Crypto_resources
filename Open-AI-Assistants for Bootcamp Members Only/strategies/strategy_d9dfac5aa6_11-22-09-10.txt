@@ -1,0 +1,58 @@
+Certainly! Here's a trading strategy that combines the use of Exponential Moving Averages (EMA) and Bollinger Bands:
+
+## Strategy Overview:
+
+### Indicators:
+
+- **Exponential Moving Average (EMA):** A type of moving average that places a greater weight and significance on the most recent data points. Typically, traders use two EMAs with different time periods (e.g., 50-period EMA and 200-period EMA).
+
+- **Bollinger Bands:** A volatility indicator developed by John Bollinger that consists of a middle band (which is an SMA or EMA), an upper band and a lower band at standard deviations (usually set at 2) above and below the middle band.
+
+### Entry Criteria:
+
+- **Long Entry (Buy Signal):**
+  1. The short-term EMA (e.g., 50-period) crosses above the longer-term EMA (e.g., 200-period) indicating a bullish trend.
+  2. The price touches or dips just below the lower Bollinger Band, suggesting it may be oversold.
+  3. Buy when the price starts to rebound upwards from the lower Bollinger Band.
+
+- **Short Entry (Sell Signal):**
+  1. The short-term EMA (e.g., 50-period) crosses below the longer-term EMA (e.g., 200-period) indicating a bearish trend.
+  2. The price touches or goes just above the upper Bollinger Band, suggesting it may be overbought.
+  3. Sell when the price starts to decline from the upper Bollinger Band.
+
+### Exit Criteria:
+
+- **Long Exit:**
+  1. When the price touches or reaches the upper Bollinger Band.
+  2. Optional: Exit if the short-term EMA crosses below the long-term EMA.
+
+- **Short Exit:**
+  1. When the price touches or reaches the lower Bollinger Band.
+  2. Optional: Exit if the short-term EMA crosses above the long-term EMA.
+
+### Additional Considerations:
+
+- **Stop Loss:** Set a stop loss to manage risk. This could be a percentage of the trade value, a fixed dollar amount, or based on a technical level like beyond the opposite Bollinger Band.
+- **Take Profit:** Set take profit targets at a predefined risk-reward ratio or let the Bollinger Band criteria be the sole exit point.
+- **Volume Confirmation:** To avoid false signals, confirm the breakout with an increase in volume.
+- **Timeframe:** The strategy can be applied on various timeframes, but it must be consistent across all indicators used.
+- **Position Sizing:** Use appropriate position sizing to manage risk effectively.
+
+### Risk Management:
+
+- Risk no more than 1-2% of the total trading capital on a single trade.
+- Adjust the number of shares/contracts based on the distance to the stop loss to maintain consistent risk per trade.
+
+## Backtesting Guidelines for AI:
+
+To code a backtest for this strategy, here are the steps the AI should follow:
+
+1. **Import Historical Data**: Load historical price data that includes high, low, close, and volume information.
+2. **Compute Indicators**: Calculate the two EMAs and the upper and lower Bollinger Bands.
+3. **Signal Generation**: Loop through the historical data to identify buy and sell signals based on the strategy's entry criteria.
+4. **Trade Execution**: Simulate trade entries at the signal price on the next bar's open and exits at the price dictated by the exit criteria.
+5. **Tracking Trades**: Keep a log of all trades, including entry and exit points, to calculate performance metrics.
+6. **Performance Metrics**: At the end of the backtest, compute key metrics such as net profit, percentage profitability, maximum drawdown, and Sharpe ratio.
+7. **Visualization**: Plot equity curves and indicator overlays to visually inspect the strategy's performance.
+
+Remember, past performance is not indicative of future results, and there's always a risk in trading based on historical data. This strategy should be further refined and tested under different market conditions.

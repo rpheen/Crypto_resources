@@ -1,0 +1,42 @@
+In order to create a trading strategy that can be back-tested by an AI, we need to define the detailed rules and conditions for entering and exiting trades. For the strategy outlined, we would incorporate the Simple Moving Average (SMA), the Average Directional Index (ADX), Bollinger Band contraction, and volume into our trading signals.
+
+Here's how we could structure the strategy:
+
+### Inputs:
+1. **SMA Period**: The number of periods used to calculate the simple moving average.
+2. **ADX Period**: The number of periods used to calculate the ADX.
+3. **Bollinger Bands Period**: The number of periods used to calculate Bollinger Bands.
+4. **Bollinger Bands Standard Deviation**: The number of standard deviations away from the SMA for the Bollinger Bands' upper and lower bands.
+5. **Volume Threshold**: The minimum volume threshold for confirming the trade signal.
+6. **Minimum ADX Value**: The minimum value of the ADX to consider the trend strong enough.
+
+### Entry Rules:
+- **Long Entry**: Enter a long position when all the following conditions are met:
+  1. The current closing price crosses above the SMA from below (SMA Crossover).
+  2. The ADX value is above the Minimum ADX Value, indicating a strong trend.
+  3. The Bollinger Bands are contracting, which we define as the current Bollinger Bands width being below the average width of the last `n` periods.
+  4. Current volume is above the Volume Threshold.
+- **Short Entry**: Enter a short position when all the following conditions are met:
+  1. The current closing price crosses below the SMA from above (SMA Crossover).
+  2. The ADX value is above the Minimum ADX Value, indicating a strong trend.
+  3. The Bollinger Bands are contracting, as defined above.
+  4. Current volume is above the Volume Threshold.
+
+### Exit Rules:
+- **Long Exit**: Exit a long position when any of the following conditions are met:
+  1. The current closing price crosses below the SMA (SMA Crossover).
+  2. The ADX value falls below the Minimum ADX Value, indicating a weakening trend.
+  3. The Bollinger Bands start to expand drastically or the price touches the upper Bollinger Band.
+- **Short Exit**: Exit a short position when any of the following conditions are met:
+  1. The current closing price crosses above the SMA (SMA Crossover).
+  2. The ADX value falls below the Minimum ADX Value, indicating a weakening trend.
+  3. The Bollinger Bands start to expand drastically or the price touches the lower Bollinger Band.
+
+### Strategy Parameters:
+- Choose appropriate periods for SMA, ADX, and Bollinger Bands based on historical data and optimization.
+- Set a Volume Threshold based on average volume to filter out low-liquidity times.
+- Define the Minimum ADX Value to filter out weak trends (commonly a value above 20 is considered as an indication of a strong trend).
+
+For backtesting purposes, you will need historical price and volume data at a periodicity (daily, hourly, etc.) that matches the periods of your technical indicators. The AI or backtesting software should be able to apply these rules to historical data to simulate trades and evaluate the performance of the strategy.
+
+Would you like to proceed with setting up some specific parameters for the strategy, or do you need assistance with another aspect of the trading strategy?

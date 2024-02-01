@@ -1,0 +1,12 @@
+Stochastic (momentum) oscillator <10 = low channel breakout/long entry; stochastic >90 = downside "Keltner" breakout from the high channel/short entry. Keltner channel = volatility
+
+
++ smooth Heiken Ashi with traling stop loss for extended profits
+
+Market trading sentiment such as Forex uses
+
+..and reverse everything for PUT/SHORTs
+
+make a grid trading bot that uses fibonacci numbers in a smma to trade on a low time frame
+
+.and poach the whales with a Banker Fund Flow Indicator, or similar for crypto using coinglass api for liquidations.

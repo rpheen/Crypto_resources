@@ -1,0 +1,41 @@
+A Bollinger Bands-based trading strategy involves using a set of three lines plotted in relation to the price of a security. The middle line is a simple moving average (SMA) typically set to a default of 20 periods, and the upper and lower bands are set at a specified number of standard deviations away from the moving average (usually two standard deviations). Here is a detailed strategy utilizing Bollinger Bands for trading:
+
+### Bollinger Bands Trading Strategy
+
+#### Strategy Assumptions:
+- We are trading a liquid asset (like a stock, currency pair, or commodity).
+- We use daily data (closing prices) for calculations.
+- The Bollinger Bands are calculated with a 20-day SMA for the middle band and the upper/lower bands at 2 standard deviations from the SMA.
+- We assume transaction costs and slippage are negligible.
+
+#### Entry and Exit Rules:
+- **Buy Signal (Long Entry)**: A buy signal occurs when the price closes below the lower Bollinger Band. The rationale is that the price has moved too far from the mean and might bounce back.
+- **Sell Signal (Short Entry)**: A sell signal occurs when the price closes above the upper Bollinger Band. The rationale is that the price may be overextended and could pull back.
+- **Exit Long Position (Take Profit for Long)**: Close the long position when the price touches or closes back above the middle Bollinger Band (SMA).
+- **Exit Short Position (Take Profit for Short)**: Close the short position when the price touches or closes back below the middle Bollinger Band.
+- Alternatively, a trailing stop loss can be used instead of a take profit level.
+- **Stop-Loss**: For long positions, set a stop-loss below the recent swing low. For short positions, set a stop-loss above the recent swing high.
+  
+#### Money Management:
+- Only risk 1-2% of trading capital on any single trade.
+- Position size is adjusted based on the stop-loss distance to maintain the risk level.
+
+#### Additional Rules:
+- **Filter**: Implement a trend filter to take only those trades that align with the predominant trend. For example, only take long trades if the price is above a longer-term SMA (e.g., 50-day or 200-day SMA). Conversely, only take short trades if the price is below the longer-term SMA.
+- **Time Filter**: Avoid taking new trades during periods of low liquidity or high volatility, such as outside of major market hours or around major news releases.
+
+#### Strategy Coding Instructions for Backtest:
+1. Import historical daily price data for the chosen asset.
+2. Calculate the 20-day SMA for the middle Bollinger Band.
+3. Calculate the upper and lower Bollinger Bands as 2 standard deviations away from the SMA.
+4. Identify buy and sell signals based on price crossing the lower and upper bands, respectively.
+5. Code the exit signals based on price touching the SMA or reaching the stop-loss level.
+6. Keep track of trades and position sizes.
+7. Calculate the performance metrics, including total return, maximum drawdown, and the Sharpe ratio.
+
+#### Performance Metrics:
+- Total Return: The percentage change in the account balance from the beginning to the end of the backtest period.
+- Maximum Drawdown: The largest peak-to-trough decline in the account balance during the backtest period.
+- Sharpe Ratio: A measure of risk-adjusted performance, calculated as the average return minus the risk-free rate, divided by the standard deviation of returns.
+
+Feel free to reach out if you want to code this strategy and backtest it using historical price data.

@@ -1,0 +1,50 @@
+Quarter Theory is a trading concept which suggests that securities' prices often gravitate towards values that are divisible by 0.25 and that significant price movements occur around these levels. According to the theory, each significant price level is divided into four quarters, providing potential support and resistance levels.
+
+A trading strategy based on the Quarter Theory can be detailed as follows:
+
+### Trading Strategy Overview
+
+#### Instruments:
+- The strategy can be applied to Forex, stocks, commodities, or indices, but it's often used with Forex due to the granularity of price movements.
+
+#### Timeframe:
+- The quarter theory can be utilized on various timeframes, but typically it's more effective on the 1-hour, 4-hour, and daily charts.
+
+#### Entry Conditions:
+- **Long Entry:** When the price breaks above a quarter level (xx.25, xx.50, xx.75, or whole number xx.00) with a significant candle (e.g., a strong closed bullish candlestick), a buy order can be placed at the break of that quarter level.
+- **Short Entry:** Conversely, when the price breaks below a quarter level with a significant candle (e.g., a closed bearish candlestick), a sell order can be placed at the break of that quarter point.
+
+#### Stop Loss:
+- **Long Position:** The stop loss for a long position can be set just below the next quarter level down.
+- **Short Position:** The stop loss for a short position can be set just above the next quarter level up.
+
+#### Take Profit:
+- For both long and short positions, the take profit can be set at the next quarter level. Traders may also use a trailing stop loss to maximize potential profits, moving the stop loss to the next quarter level as the price moves favourably.
+
+#### Risk Management:
+- Only a small percentage of the total account balance (e.g., 1-2%) should be risked on a single trade to manage the risk properly.
+
+### Detailed Trading Rules:
+
+1. Identify the current price and determine the nearest quarter levels above and below the current price.
+2. Wait for a price breakout from the quarter level.
+3. Confirm the breakout with a significant candlestick pattern (bullish for long, bearish for short).
+4. Ensure there are no conflicting signals from indicators or fundamental news (if applicable).
+5. Place the trade in the direction of the breakout.
+6. Set the stop loss at the last quarter level before the breakout.
+7. Set the take profit at the next quarter level, or use a trailing stop moved to each quarter level passed.
+8. Exit the trade if the price reaches the take profit, hits the stop loss, or if the signal reverses at the next quarter level.
+
+### Example Algorithm Steps for Backtesting:
+
+1. Calculate quarter levels for historical price data.
+2. Identify candlesticks where breaks in quarter levels occurred.
+3. Filter entries using significant candlestick patterns.
+4. Record potential trade entries, exits, stop losses, and take profits.
+5. Calculate the results of each trade.
+6. Summarize the performance metrics, such as total return, drawdown, win rate, etc.
+7. Optimize the strategy by adjusting parameters and analyzing different instruments/timeframes.
+
+The backtesting should be done on historical data, keeping in mind market conditions that might not be represented in the backtesting period chosen.
+
+Would you like me to code the detailed backtest following these rules?
