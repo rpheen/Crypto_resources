@@ -1,4 +1,4 @@
-############# Coding VWAP indicator 2024
+############# Coding VWAP indicator 
 
 import ccxt
 import key_file as k

@@ -1,7 +1,7 @@
-####################### ​Coding Basics 2024
+####################### ​Coding Basics 
 
 # step 1 - download visual studio code
-
+ 
 print('write code')
 # LOOPS, FUNCTIONS, WHILE LOOPS, VARIABLEs
 

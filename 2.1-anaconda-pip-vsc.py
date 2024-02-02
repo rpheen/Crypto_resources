@@ -1,8 +1,8 @@
 '''
-Setting up a new computer 2024-
+Setting up a new computer-
 Must download conda and set up the below, then bring in the folders below
 1. Download anaconda 
-
+ 
 Create 1st Enviroment-
 2. conda create --name algotrader python=3.8.5
 3. conda activate algotrader

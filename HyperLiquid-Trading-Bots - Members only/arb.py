@@ -1,7 +1,7 @@
 import nice_funcs as n 
 import time, schedule 
 
-# building an arb bot based off the funding rates
+# building an arb bot based off the funding rates 
 # lower funding rate, long, higher funding rate, short 
 
 sym1 = 'BTC'

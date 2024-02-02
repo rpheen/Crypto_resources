@@ -1,4 +1,4 @@
-############# Coding trading bot #3 - engulfing candle 2024
+############# Coding trading bot #3 - engulfing candle 
 
 '''
 ENGULFING candle ===

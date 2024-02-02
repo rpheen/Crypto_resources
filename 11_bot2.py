@@ -1,4 +1,4 @@
-############# Coding trading bot #2 - breakout bot 2024
+############# Coding trading bot #2 - breakout bot 
 
 '''
 calc the last 3 days of data

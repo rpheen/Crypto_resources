@@ -1,4 +1,4 @@
-############ Coding RSI indicator 2024
+############ Coding RSI indicator 
 
 import ccxt
 import key_file as k

@@ -1,4 +1,4 @@
-############# Coding VWMA indicator 2024
+############# Coding VWMA indicator 
 
 import ccxt
 import key_file as k

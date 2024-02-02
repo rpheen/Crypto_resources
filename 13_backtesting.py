@@ -1,4 +1,4 @@
-######## BACKTESTING with backtrader 2024
+######## BACKTESTING with backtrader 
 
 from datetime import datetime 
 import backtrader as bt 

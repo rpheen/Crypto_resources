@@ -1,5 +1,5 @@
-############# Coding trading bot #1 - sma bot w/ob data 2024
-
+############# Coding trading bot #1 - sma bot w/ob data
+ 
 import ccxt 
 import pandas as pd 
 import numpy as np

@@ -1,6 +1,6 @@
-############## Coding SMA Indicator 2024
+############## Coding SMA Indicator
 
-################### Coding Risk Management
+################### Coding Risk Management 
 
 import ccxt
 import key_file as k

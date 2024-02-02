@@ -1,4 +1,4 @@
-# a bunch of nice functions to have in 2024
+# a bunch of nice functions to have
 
 
 import ccxt
@@ -6,7 +6,7 @@ import json
 import pandas as pd 
 import numpy as np
 import dontshare_config as ds 
-from datetime import date, datetime, timezone, tzinfo
+from datetime import date, datetime, timezone, tzinfo 
 import time, schedule
 
 phemex = ccxt.phemex({

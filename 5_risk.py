@@ -1,10 +1,10 @@
-################### Coding Risk Management 2024
+################### Coding Risk Management
 
 import ccxt
 import key_file as k
 import time , schedule 
 import pandas as pd 
-
+ 
 phemex = ccxt.phemex({
     'enableRateLimit': True, 
     'apiKey': k.xP_KEY,
