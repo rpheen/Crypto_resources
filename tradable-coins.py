@@ -1,16 +1,38 @@
-from coinbase.rest import RESTClient
+import requests
+import csv
 
-# Set your API key and secret
-api_key = "organizations/a767d337-1e91-45cb-95fa-75b701dd6edb/apiKeys/039c4bdc-33a2-4f66-bd02-cc83018624d3"
-api_secret = "-----BEGIN EC PRIVATE KEY-----\nMHcCAQEEIKOsU+N4V/YsTAe9FSHD9WEMMQk8pBLDeKI3muBKrlVboAoGCCqGSM49\nAwEHoUQDQgAEHe9LjhybIea2ZKVre0XdSvKrJ/VCqEJ4qVOFS3qmK961PBKbSlD7\n/QYQYcRny2KvFUIfSOHE8q3GkWLFAPeO/Q==\n-----END EC PRIVATE KEY-----\n"
+def get_tradeable_crypto_coins():
+    url = "https://api.exchange.coinbase.com/products"
+    tradeable_coins = set()
 
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        products = response.json()
 
-# Create a RestClient instance
-client = RESTClient(api_key=api_key, api_secret=api_secret, timeout=5)
+        for product in products:
+            base_currency = product['base_currency']
+            quote_currency = product['quote_currency']
+            tradeable_coins.add(base_currency)
+            tradeable_coins.add(quote_currency)
+            
+    except requests.RequestException as e:
+        print(f"Failed to fetch tradeable crypto coins: {e}")
+        return []
 
-# Get the list of tradable products
-products = client.get_products()
+    return sorted(list(tradeable_coins))
 
-# Print the list of tradable products
-for product in products:
-    print(product['id'])
+def write_coins_to_csv(coins, filename="tradeable_crypto_coins.csv"):
+    with open(filename, mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(["Tradeable Crypto Coins"])
+        for coin in coins:
+            writer.writerow([coin])
+    print(f"Tradeable crypto coins have been written to {filename}")
+
+if __name__ == "__main__":
+    tradeable_coins = get_tradeable_crypto_coins()
+    if tradeable_coins:
+        write_coins_to_csv(tradeable_coins)
+    else:
+        print("No tradeable coins fetched to write to CSV.")
