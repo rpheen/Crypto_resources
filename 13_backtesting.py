@@ -30,18 +30,18 @@ cerebro.addstrategy(SmaCross)
 # this is how i use manually pulled data from yahoo finance, prob the one i use for now
 data = bt.feeds.YahooFinanceCSVData(
 
-    dataname = '/Users/arb/Dropbox/dev/yt_vids/atc/BTC-USD.csv',
+    dataname = 'BTC-USD.csv',
    
     # do not pass values before this date
     # this is when we want to start the date
-    fromdate=datetime(2017, 1, 6),
+    fromdate=datetime(2023, 1, 6),
     # do not passs values after this date
-    todate = datetime(2022, 5, 4), 
+    todate = datetime(2024, 2, 1), 
     reverse = False
 )
 
 # this sets the cash amount to the back test
-cerebro.broker.set_cash(1000000)
+cerebro.broker.set_cash(10000)
 
 # set the commision 0.1% ... divide by 100 to remove the %
 # phemex contract is .00075 taker and -.00025 for maker
